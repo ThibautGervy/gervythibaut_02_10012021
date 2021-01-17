@@ -1,6 +1,6 @@
 @font-face {
-    src: url("/font/Raleway-Italic-VariableFont_wght.ttf"), 
-    url("font/Raleway-VariableFont_wght.ttf");
+    src: url("font/Raleway-VariableFont_wght.ttf");
+    font-family: Raleway;
 }
 
 * {
@@ -12,7 +12,6 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 300;
 }
-
 
 .container {
     padding : 0 30px;
@@ -26,15 +25,22 @@ body {
     width : 80px;
 }
 
-.naviguation {
+nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
 }
 
 .inscription {
     color: #0065FC;
     font-weight: bold;
     cursor: pointer;
+    font-size: 13px;
 }
 
 .naviguation a:hover {
@@ -45,8 +51,8 @@ body {
 header li {
     display: inline-block;
     list-style: none;
-    padding: 25px 20px 0 20px;
     font-size: 13px;
+    padding-right: 30px;
 }
 
 .title h1 {
@@ -60,6 +66,11 @@ header li {
     margin-top : 5px;
     font-size: 13px;
 }
+
+
+
+
+
 
 /*********************** Search button ***********************/
 
@@ -276,7 +287,7 @@ form {
 .global_popular{
     margin: 0;
     align-items: center;
-    width: 300px;
+    width: 315px;
     background-color: #F2F2F2;
     margin-left: 25px;
     height: 470px;
@@ -333,37 +344,40 @@ form {
     margin: 4rem 0;
     margin: auto;
   }
-  .activity_title {
+
+.activity_title {
     grid-column: 1/-1;
     font-size: 16px;
     margin-top: 40px;
-  }
-  .activity_card {
+}
+  
+.activity_card {
     box-shadow: 0 3px 3px rgb(226, 226, 226);
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition-duration: 0.1s;
-  }
+}
   
-  .activity_card_wrapimg {
+.activity_card_wrapimg {
     position: relative;
     flex: 1;
-  }
-  .activity_card_wrapimg_img {
+}
+  
+.activity_card_wrapimg_img {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
-  }
+}
 
-  .activity_card_title {
+.activity_card_title {
     margin: 1.2rem 1.5rem;
     font-size: 11px;
-  }
+}
   
-  @media (min-width: 1100px) {
+  @media (min-width: 982px) {
     .activity {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto 7rem 1rem 1rem 1rem 7rem;
@@ -393,27 +407,6 @@ form {
       grid-row: 4/7;
     }
   }
-  @media (max-width: 1100px) {
-    .activity {
-      row-gap: 2rem;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto 12rem 12rem;
-    }
-  }
-  @media (max-width: 925px) {
-    .activity {
-      row-gap: 2rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto 12rem 12rem 12rem;
-    }
-  }
-  @media (max-width: 650px) {
-    .activity {
-      row-gap: 2rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
-    }
-  }
 
 
 /************************************ FOOTER **********************************/
@@ -425,6 +418,7 @@ form {
 .footer_reservia {
     display: flex; 
     margin-top: 40px;
+    display: flex;
 }
 
 .footer_reservia ul {
@@ -432,10 +426,10 @@ form {
     padding-left: 0px;
     height: 130px;
     padding-top: 25px;
+    
 }
 
 .footer_reservia li {
-    padding-right: 130px;
     padding-top: 3px;
 }
 
@@ -453,4 +447,186 @@ a {
 
 .footer_description {
     font-size : 12px;
+}
+
+.footer_reservia_1, .footer_reservia_2, .footer_reservia_3 {
+    width: auto;
+    padding-right: 130px;
+}
+
+/************************************ RESPONSIVE **********************************/
+
+
+  @media (max-width: 982px) {
+    .activity {
+      row-gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 12rem 12rem 12rem;
+    }
+  }
+  @media (max-width: 475px) {
+    .activity {
+      row-gap: 2rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+    }
+  }
+
+
+/* -- Tablette  -- */
+@media all and (max-width: 982px) {
+    .container {
+     padding: 0 20px;
+     width: auto;
+   }
+  
+   .grid_hosting {
+       max-width: 100%;
+       display: flex;
+       flex-direction: column-reverse;
+   }
+
+   .global_hosting {
+       margin-top: 15px;
+       padding: 10px 0;
+       display: flex;
+       flex-direction: column;
+       max-width: 100%;
+       height: 500px;
+   }
+
+   .grid {
+       grid-gap: 10px 0px;
+       margin:15px 15px;
+   }
+   .grid_item {
+       width: auto;
+       height: 164px;
+   }
+
+   .grid_item img {
+       height: 100px;
+       width: 100%;
+       object-fit: cover;
+   }
+
+   .grid_simple {
+       display: flex;
+       justify-content: space-between;
+       max-width: 876px;
+       height: 220px;
+       margin: 20px 15px;
+    }
+
+   aside {
+    margin: 0px;
+    border-radius: 0;
+  }
+
+  .global_popular {
+    width: auto;
+    margin-left: 0px;
+    height: 277px;
+  }
+
+  .global_popular a {
+    width: 31%;
+  }
+
+  .grid_item_popular {
+    height: 200px;
+    width: 252px;
+    margin: 0 10px;
+    box-shadow: 0 3px 3px rgb(226, 226, 226);
+  }
+
+  .grid_item_popular img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+  }
+
+  .grid_item .name {
+      font-weight: bold;
+  }
+
+  .description_popular {
+    width: 100%;
+    padding: 8px;
+    padding-bottom: 2px;
+  }
+
+  .name_popular {
+    padding-left: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+    .note_popular {
+        padding-left: 8px;
+    }
+
+    .title_and_fas h2 {
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+
+    .fa-chart-line {
+        padding-top: 15px
+    }
+
+    .grid_hosting h2 {
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+
+    .more_more {
+        padding-left: 0px;
+    }
+
+    .activity_title {
+        padding-left: 15px;
+        margin-bottom: 0px;
+    }
+
+@media all and (max-width:588px) {
+    .filtres {
+        display: block;
+    }
+}
+
+@media all and (max-width:537px) {
+    .btn_filtres {
+        margin-top: 5px;
+    }
+}
+
+
+
+/* FOOTER */
+
+
+@media all and (max-width: 480px) {
+   .footer_reservia{
+       flex-direction: column;
+   }
+   .footer_reservia ul {
+       margin: 0;
+       height: 110px;
+       width: auto;
+   }
+   
+   .footer_reservia_2, .footer_reservia_3 {
+       padding-top: 0px;
+   }
+}
+
+/* TELEPHONE */
+
+@media all and (max-width:500px) {
+    .search {
+        width: 100%;
+    }
+}
 }

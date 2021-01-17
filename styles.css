@@ -25,13 +25,7 @@ body {
     width : 80px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
+nav, nav ul {
     display: flex;
     align-items: center;
 }
@@ -41,6 +35,12 @@ nav ul {
     font-weight: bold;
     cursor: pointer;
     font-size: 13px;
+}
+
+.naviguation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .naviguation a:hover {

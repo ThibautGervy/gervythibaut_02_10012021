@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-    padding : 0 30px;
     width : 990px; 
     margin: auto;
 }
@@ -178,7 +177,7 @@ form {
 
 /******************************** Grid Hosting ***********************************/
 
-.grid_hosting{
+#hebergements{
     display: flex;
 }
 
@@ -215,7 +214,9 @@ form {
     height: 470px;
 }
 
-.grid_hosting h2 {
+
+
+#hebergements h2 {
     margin: 0px 15px;
     padding-top : 35px;
     font-size: 17px;
@@ -226,7 +227,7 @@ form {
     margin: 0;
     padding: 0px 10px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .description {
@@ -287,7 +288,7 @@ form {
 .global_popular{
     margin: 0;
     align-items: center;
-    width: 315px;
+    width: 371px;
     background-color: #F2F2F2;
     margin-left: 25px;
     height: 470px;
@@ -305,7 +306,7 @@ form {
     margin: 0;
     padding-top: 10px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .description_popular {
@@ -338,7 +339,7 @@ form {
 
 /********************************* Activity ********************************/
 
-.activity {
+#activity {
     display: grid;
     column-gap: 2rem;
     margin: 4rem 0;
@@ -378,7 +379,7 @@ form {
 }
   
   @media (min-width: 982px) {
-    .activity {
+    #activity {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto 7rem 1rem 1rem 1rem 7rem;
     }
@@ -458,14 +459,14 @@ a {
 
 
   @media (max-width: 982px) {
-    .activity {
+    #activity {
       row-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 12rem 12rem 12rem;
     }
   }
   @media (max-width: 475px) {
-    .activity {
+    #activity {
       row-gap: 2rem;
       grid-template-columns: 1fr;
       grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
@@ -480,7 +481,7 @@ a {
      width: auto;
    }
   
-   .grid_hosting {
+   #hebergements {
        max-width: 100%;
        display: flex;
        flex-direction: column-reverse;
@@ -515,7 +516,7 @@ a {
        justify-content: space-between;
        max-width: 876px;
        height: 220px;
-       margin: 20px 15px;
+       margin: 15px 15px;
     }
 
    aside {
@@ -524,6 +525,7 @@ a {
   }
 
   .global_popular {
+      margin-top: 15px;
     width: auto;
     margin-left: 0px;
     height: 277px;
@@ -576,7 +578,7 @@ a {
         padding-top: 15px
     }
 
-    .grid_hosting h2 {
+    #hebergements h2 {
         margin-left: 0px;
         padding-top: 15px;
     }
@@ -628,5 +630,95 @@ a {
     .search {
         width: 100%;
     }
+}
+}
+
+
+@media (max-width: 500px) {
+nav {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+nav ul {
+    width: 100%;
+    margin-top: 0px;
+}
+nav, nav ul {
+    display: flex;
+    padding: 0;
+}
+nav li {
+    flex: 1;
+    border-bottom: 3px solid rgb(242, 242, 242);
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 6px;
+}
+
+nav li:hover {
+    border-bottom: 3px solid #0065fc;
+    padding-bottom: 6px;
+}
+
+.naviguation a:hover {
+    color : #0065FC;
+    border-top: 0px solid #0065fc;
+}
+
+.logo {
+    position: absolute;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.naviguation {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: unset;
+    margin: 0 -20px;
+}
+
+.inscription {
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.grid_simple {
+    flex-direction: column;
+    height: auto;
+}
+
+.global_popular {
+    height: auto;
+}
+
+.grid_item_popular {
+    height: 135px;
+    width: 280px;
+}
+.grid_item_popular img {
+    width: 100px;
+    height: 100%;
+}
+
+.grid {
+    grid-template-columns: none;
+}
+
+.global_hosting {
+    background-color: white;
+    margin-top: 0px;
+    height: 100%;
+}
+
+.grid_item {
+    box-shadow: 0 3px 3px rgb(226, 226, 226);
+    width: 100%;
+    margin: auto;
+}
+
+#activity {
+    height: 100%;
 }
 }
